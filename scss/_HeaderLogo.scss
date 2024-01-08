@@ -1,0 +1,11 @@
+#HeaderLogo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include md {
+    img {
+      display: none;
+    }
+  }
+}

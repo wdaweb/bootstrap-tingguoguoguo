@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800&family=RocknRoll+One&family=Zilla+Slab:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- self -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="./css/all.css">
+  <style>
+    * {
+      font-family: 'Zilla Slab', serif;
+    }
+
+    html,
+    body {
+      position: relative;
+    }
+
+    .swiper {
+      width: 100%;
+      /* height: 100%; 移除或更改這行 */
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      /* 保留這行，確保 swiper-slide 的高度與父元素相等 */
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- logo區域 ------------------------------------------------------------>
+  <div id="HeaderLogo"><a href="#"><img src="./images/logo.jpg"></a></div>
+
+  <!-- 白色導覽列--------------------------------------------------------------->
+  <div id="MyNav" class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-whrite ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Breads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Artisan Breads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Anadama</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Zopf</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Baguette</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sourdough</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">More</a>
+            </li>
+          </ul>
+        </div>
+        <div><a href="#"><img src="./images/logo.jpg"></a></div>
+        <div>
+          <a href="#">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 紅色導覽列 ------------------------->
+  <div id="MyNav2" class="container-fluid">
+    <div class="row">
+      <div class="col"><a href="#">Free Shipping All Order Above On $99</a></div>
+      <div class="col"><a href="#">Return & Exchange In 3 Working Days</a></div>
+      <div class="col"><a href="#">Special Weekly Offer & Special Gift</a></div>
+    </div>
+  </div>
+  <a href=""></a>
+
+  <!-- 輪播圖 ----------------------------->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./images/carousel1.jpg"></div>
+      <div class="swiper-slide"><img src="./images/carousel2.jpg"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: 'horizontal',
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>

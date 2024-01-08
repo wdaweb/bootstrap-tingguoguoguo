@@ -1,0 +1,51 @@
+#MyNav {
+
+  .nav-link {
+    color: black;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+
+  a {
+    font-size: 20px;
+    margin: 4px;
+    color: black;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  img {
+    display: none;
+  }
+
+  @include md {
+
+    height: 120px;
+
+    img {
+      display: block;
+    }
+
+  }
+}
+
+#MyNav2 {
+  background: red;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  @include md {
+    display: none;
+  }
+}
