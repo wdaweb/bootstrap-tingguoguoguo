@@ -4,7 +4,7 @@
     color: black;
 
     &:hover {
-      color: red;
+      color: $p-color;
     }
   }
 
@@ -15,7 +15,7 @@
     color: black;
 
     &:hover {
-      color: red;
+      color: $p-color;
     }
   }
 
@@ -35,13 +35,13 @@
 }
 
 #MyNav2 {
-  background: red;
+  background: $p-color;
   height: 50px;
   text-align: center;
   line-height: 50px;
 
   a {
-    color: white;
+    color: $s-color;
     text-decoration: none;
   }
 
