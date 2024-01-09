@@ -1,16 +1,15 @@
 #HeaderLogo {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  img {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
 
   @include md {
-    text-align: center;
-
     img {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 0;
     }
   }
 

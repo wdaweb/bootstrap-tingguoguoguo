@@ -1,4 +1,15 @@
 #MyNav {
+  margin-top: 120px;
+
+  .navbar-toggler {
+    //無效
+    color: #2b2c2f !important;
+    border: none !important;
+  }
+
+  button:focus {
+    box-shadow: none;
+  }
 
   .nav-link {
     color: black;
@@ -7,6 +18,7 @@
       color: $p-color;
     }
   }
+
 
 
   a {
@@ -19,26 +31,21 @@
     }
   }
 
-  img {
-    display: none;
-  }
-
-  @include md {
-
-    height: 120px;
-
-    img {
-      display: block;
+  @include lg {
+    .container-fluid {
+      flex-direction: row-reverse;
     }
-
   }
 }
 
 #MyNav2 {
   background: $p-color;
-  height: 50px;
   text-align: center;
-  line-height: 50px;
+  display: none;
+
+  .col {
+    border-right: 1px solid #d44646;
+  }
 
   a {
     color: $s-color;
@@ -46,6 +53,14 @@
   }
 
   @include md {
-    display: none;
+    display: block;
+    height: 90px;
+    line-height: 90px;
+  }
+
+  @include lg {
+    display: block;
+    height: 50px;
+    line-height: 50px;
   }
 }
