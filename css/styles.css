@@ -72,18 +72,57 @@
   }
 }
 
-#section01 .card-title {
+#section01 .card {
+  margin: 30px 0;
+  border: none;
+}
+#section01 .card .card-body {
+  padding: 0;
+}
+#section01 .card .card-body .card-title {
   font-size: 35px;
-  padding-bottom: 10px;
+  padding-bottom: 16px;
   font-weight: 600;
   letter-spacing: 1.3px;
 }
-#section01 .card-text {
+#section01 .card .card-body .card-text {
   color: #656565;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.3px;
-  line-height: 26px;
+  line-height: 22px;
+}
+#section01 .card .card-body button {
+  background: white;
+  border: 1px solid black;
+  padding: 12px 27px;
+  letter-spacing: 1.5px;
+}
+#section01 .card .card-body button:hover {
+  background: #d20707;
+  border: 1px solid transparent;
+}
+#section01 .card .card-body button:hover a {
+  color: white;
+}
+#section01 .card .card-body button a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+}
+#section01 img {
+  margin: 10px 16px;
+  width: 210px;
+  height: 280px;
+}
+@media (min-width: 992px) {
+  #section01 .card {
+    margin: 50px 0;
+  }
+  #section01 img {
+    margin: 50px 16px;
+  }
 }
 
 .swiper {
@@ -97,9 +136,15 @@
   cursor: pointer;
 }
 .swiper .swiper-button-prev {
+  color: grey;
+}
+.swiper .swiper-button-prev:hover {
   color: #d20707;
 }
 .swiper .swiper-button-next {
+  color: grey;
+}
+.swiper .swiper-button-next:hover {
   color: #d20707;
 }
 

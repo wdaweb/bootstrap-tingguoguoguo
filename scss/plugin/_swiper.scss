@@ -27,11 +27,21 @@
   }
 
   .swiper-button-prev {
-    color: $p-color;
+    color: grey;
+
+    &:hover {
+      color: $p-color;
+
+    }
   }
 
   .swiper-button-next {
-    color: $p-color;
+    color: grey;
+
+    &:hover {
+      color: $p-color;
+
+    }
   }
 }
 
