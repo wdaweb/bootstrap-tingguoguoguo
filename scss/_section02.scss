@@ -1,0 +1,35 @@
+#section02 {
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .fa-solid {
+    color: rgb(219, 218, 218);
+    font-size: 10px;
+    display: none;
+  }
+
+  .nav-pills {
+    .nav-item {
+      .nav-link {
+        color: black;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+      }
+
+      .active {
+        background: none;
+        color: $p-color;
+      }
+    }
+  }
+
+  @include md {
+    .fa-solid {
+      display: block;
+    }
+  }
+}
