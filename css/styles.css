@@ -197,13 +197,61 @@
      object-fit: cover;
 }
 
-.mySwiper2 img {
+.mySwiper2 .swiper-slide {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.mySwiper2 .swiper-slide img {
   border-bottom: 1px solid rgb(218, 218, 218);
 }
-.mySwiper2 p {
+.mySwiper2 .swiper-slide p {
   margin-top: 12px;
   font-size: 17px;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: #656565;
+}
+.mySwiper2 .swiper-slide .info button {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  padding: 8px 20px;
+  border: none;
+  font-weight: 600;
+  background: #d20707;
+  display: none;
+}
+.mySwiper2 .swiper-slide .info button:hover {
+  background: #000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.mySwiper2 .swiper-slide .info div {
+  color: black;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  padding: 8px 20px;
+  border: none;
+  font-weight: 600;
+  background: white;
+}
+.mySwiper2 .swiper-slide .info div:hover {
+  color: #d20707;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (min-width: 768px) {
+  .mySwiper2 .swiper-slide .info {
+    position: absolute;
+    top: 134px;
+    left: -149px;
+  }
+  .mySwiper2 .swiper-slide .info button {
+    display: block;
+  }
+  .mySwiper2 .swiper-slide .info div {
+    position: relative;
+    top: 159px;
+  }
 }
