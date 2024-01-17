@@ -42,10 +42,8 @@ var swiper2 = new Swiper(".mySwiper2", {
   }
 
 });
-
 // 創建一個 MediaQueryList 物件，檢查視窗寬度是否在 md 尺寸以上
 var mediaQuery = window.matchMedia('(min-width: 768px)');
-
 /* section02 gsap動畫 */
 $('.swiper-slide').hover(
   function () {
@@ -79,4 +77,48 @@ $('.swiper-slide').hover(
     $(this).find('img').attr('src', originalImageSrc);
   }
 );
+
+/* section03 視差 */
+const tween1 = gsap.to('.info2', {
+  scrollTrigger: {
+    trigger: '.info2',
+    start: 'top 40%',
+    end: 'bottom 60%',
+    // markers: true,
+  },
+  y: '10%',
+  display: 'block',
+  duration: 1.5,
+  ease: 'expoScale'
+})
+jarallax(document.querySelectorAll(".jarallax"));
+
+/* section04 gsap + 輪播圖 */
+var swiper3 = new Swiper(".mySwiper2", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    576: {
+      slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 2
+    },
+    920: {
+      slidesPerView: 3
+    },
+    1200: {
+      slidesPerView: 3
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+
+});
+
+
+
+
 
