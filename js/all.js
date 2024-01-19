@@ -94,12 +94,12 @@ const tween1 = gsap.to('.info2', {
 jarallax(document.querySelectorAll(".jarallax"));
 
 /* section04 gsap + 輪播圖 */
-var swiper3 = new Swiper(".mySwiper2", {
-  slidesPerView: 1,
+var swiper3 = new Swiper(".mySwiper3", {
+  slidesPerView: 2,
   spaceBetween: 30,
   breakpoints: {
     576: {
-      slidesPerView: 1
+      slidesPerView: 2
     },
     768: {
       slidesPerView: 2
@@ -109,6 +109,88 @@ var swiper3 = new Swiper(".mySwiper2", {
     },
     1200: {
       slidesPerView: 3
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+
+});
+
+
+/* section04 gsap動畫 */
+$('.retangle').hover(
+  function () {
+    // 只在 md 尺寸以下時執行動畫
+    if (!mediaQuery.matches) {
+      var redcircle = $(this).find('.redcircle');
+      gsap.to(redcircle, {
+        top: 50,
+        duration: 0.3,
+        ease: 'power2.inOut',
+      });
+      //  md以上
+    } else {
+      var redcircle = $(this).find('.redcircle');
+      gsap.to(redcircle, {
+        top: 10,
+        duration: 0.3,
+        ease: 'power2.inOut',
+      });
+    }
+  },
+  function () {
+    // 只在 md 尺寸以下時執行動畫
+    if (!mediaQuery.matches) {
+      var redcircle = $(this).find('.redcircle');
+      gsap.to(redcircle, {
+        top: -210,
+        duration: 0.3,
+        ease: 'power2.inOut',
+      });
+      // md以上
+    } else {
+      var redcircle = $(this).find('.redcircle');
+      gsap.to(redcircle, {
+        top: -250,
+        duration: 0.3,
+        ease: 'power2.inOut',
+      });
+    }
+  }
+);
+
+const tween2 = gsap.to('.section04', {
+  scrollTrigger: {
+    trigger: '.section04',
+    start: 'top 50%',
+    end: 'bottom 60%',
+    // markers: true,
+  },
+  y: '10%',
+  display: 'block',
+  duration: 1.8,
+  ease: 'expoScale'
+})
+
+/* section05 */
+/* section04 gsap + 輪播圖 */
+var swiper3 = new Swiper(".mySwiper4", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  breakpoints: {
+    576: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 2
+    },
+    920: {
+      slidesPerView: 2
+    },
+    1200: {
+      slidesPerView: 2
     }
   },
   navigation: {
